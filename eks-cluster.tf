@@ -5,7 +5,7 @@ module "eks" {
   subnets         = module.vpc.private_subnets
 
   tags = {
-    Name = local.cluster_name
+    Name        = local.cluster_name
     Environment = var.env_tag
   }
 
