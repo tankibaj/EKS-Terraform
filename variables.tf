@@ -11,7 +11,8 @@ variable "cluster_version" {
 }
 
 locals {
-  cluster_name = "hello-eks-${random_string.suffix.result}"
+  cluster_name = "hello-eks-${random_string.this.result}"
+  # cluster_name = "hello-eks-${random_pet.this.id}"
 }
 
 variable "env_tag" {
